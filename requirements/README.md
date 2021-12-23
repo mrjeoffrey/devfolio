@@ -60,13 +60,13 @@ This homework is graded based on the following criteria:
 
 ### Deployment: 32%
 
-* Application deployed at live URL.
+* ~~Application deployed at live URL.~~
 
-* Application loads with no errors.
+* ~~Application loads with no errors.~~
 
 * Application GitHub URL submitted.
 
-* GitHub repository contains application code.
+* ~~GitHub repository contains application code.~~
 
 ### Application Quality: 15%
 
@@ -74,9 +74,9 @@ This homework is graded based on the following criteria:
 
 ### Repository Quality: 13%
 
-* Repository has a unique name.
+* ~~Repository has a unique name.~~
 
-* Repository follows best practices for file structure and naming conventions.
+* ~~Repository follows best practices for file structure and naming conventions.~~
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 

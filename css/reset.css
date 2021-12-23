@@ -1,0 +1,23 @@
+/* Retain box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove browser default margins and padding */
+
+body, h1, h2, h3, h4, h5, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove bullets from lists */
+
+ul, ol {
+    list-style-type: none;
+}
+
+/* Resetting image properties */
+img {
+    max-width: 100%;
+    display:block;
+}
