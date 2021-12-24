@@ -14,17 +14,17 @@
 </head>
 <body>
     
-<header>
+<header class="flex space-between center">
     <h1 id="logo">jeoffrey.io</h1>
-    <nav>
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
+    <nav class="flex space-evenly">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
     </nav> 
 </header>
 
 <section class="about grid-parent">
-    <h2>about me</h2>
+    <h2 id="about">about</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae error deserunt ipsa sunt recusandae distinctio est corporis, delectus nisi quas nesciunt, odit maxime at praesentium esse quo cum ea totam. Molestiae rerum id laborum in commodi maxime nostrum adipisci! Quibusdam explicabo repudiandae sed animi maxime iusto nam quod cupiditate architecto.</p>
     <div class="links">
         <a href="">github</a>
@@ -34,12 +34,12 @@
 </section>
 
 <section class="portfolio grid-parent">
-    <h2>projects</h2>
+    <h2 id="projects">projects</h2>
 
     <div class="portfolio-grid">
 
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -50,7 +50,7 @@
         </div>
         
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -61,7 +61,7 @@
         </div>
 
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -72,7 +72,7 @@
         </div>
 
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -83,7 +83,7 @@
         </div>
 
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="card">
-            <img class="card-image" src="https://unsplash.it/300" alt="portfolio image">
+            <img class="card-image" src="https://picsum.photos/300/150" alt="portfolio image">
             
             <div class="card-description">
                 <h3>Project Title</h3>
@@ -109,12 +109,18 @@
 </section>
 
 <section class="contact grid-parent">
-    <h2>contact</h2>
-    <p>Contact Form</p>
+    <h2 id="contact">contact</h2>
+    <form class="flex space-between center">
+        <div><label for="name">name</label><input type="text" placeholder="name"></div>
+        <div><label for="email">email</label><input type="text" placeholder="email"></div>
+        <div><label for="message">short message</label><input type="text" placeholder="I need help with my website"></div>
+        <div><button>submit</button></div>
+    </form>
 </section>
 
-<footer>
-    Made with Love from Irvine
+<footer class="grid-parent">
+    <h3>Made with Love from Irvine</h3>
+    <p>(c)2021 jeoffrey.io All Rights Reserved.</p>
 </footer>
 
 
