@@ -28,7 +28,7 @@ form > * {
 
 .grid-parent {
     display:grid;
-    gap:1rem;
+    gap:.85rem;
     grid-template-columns: 1fr 2fr 1fr;
 }
 
@@ -47,25 +47,34 @@ form > * {
     grid-column: span 1;
 }
 
+/* .about {
+    padding-top:62px;
+} */
 
 section, footer {
     margin: 2rem 5rem;
 }
 
 #logo {
-    font-size: 1rem;
-    margin-left:1rem;
+    font-size: .85rem;
+    margin-left:2rem;
 }
 
 body {
-    font-family: var(--main-font);
-    font-size: 12pt;
     background-color: #fbfcfd;
+    font-family: var(--main-font);
+    font-size: .9rem;
+    line-height:1.6rem;
 }
+
+
 
 header {
     background-color: #3d3d3d;
     color: white;
+    /* position:fixed;
+    width: 100%;
+    top:0; */
 }
 
 h1 {
@@ -79,6 +88,14 @@ h2, footer h3 {
     margin-right:10%;
 }
 
+h2 {
+    font-size: 1rem;;
+}
+
+nav{
+    padding-right: 20px;
+}
+
 nav a {
     text-decoration: none;
     padding:20px;
@@ -87,7 +104,7 @@ nav a {
 
 .links a {
     text-decoration: none;
-    padding:20px;
+    padding:15px;
     color: grey;
 }
 
@@ -112,25 +129,48 @@ a:hover {
 }
 
 .card-description {
-    padding: 1rem;
+    padding: .95rem;
+
 }
 .card-description > *{
-    padding-bottom: .75rem;
+    padding-bottom: .50rem;
+}
+
+.card-description > *:last-child{
+    padding-bottom: 0;
+}
+
+.card-description h3 {
+    font-size: .85rem;
+}
+
+.card-btn {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: .5rem;
 }
 
 .button {
     display: inline-block;
     background:rgb(85, 171, 224);
     color:white;
-    padding: .25em .5em;
+    padding: .5em .75em;
     border-radius: .25rem;
     font-family: var(--code-font);
-    align-items: flex-end;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.button:hover {
+    background:rgb(54, 130, 178);
+    color:white;
 }
 
 .links {
     display:block;
 }
+
 
 label {
     display: block;
@@ -144,8 +184,17 @@ label {
 footer {
     font-size: .75em;
     text-transform: uppercase;
-    font-weight: lighter;
     letter-spacing: .10em;
-    font-family: var(--code-font);
     text-align: right;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+footer .credits {
+    font-weight: 400;
+    font-size: .95em;
+}
+
+footer p {
+    grid-column: span 2;
 }
