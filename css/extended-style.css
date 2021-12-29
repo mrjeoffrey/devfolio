@@ -8,23 +8,21 @@
 
 body {
     display:grid;
-    grid-template-columns: 
-    10em 1fr 10em;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-    "nav nav nav"
-    ". main ."
-    ". hire ."
-    ". work ."
-    ". clients ."
-    ". probono ."
-    ". collab ."
-    ". resume ."
-    ". connect ."
-    ". footer.";
-    row-gap: 1rem;;
+    "nav"
+    "main"
+    "hire"
+    "work"
+    "clients"
+    "probono"
+    "collab"
+    "resume"
+    "connect"
+    "footer";
 }
 
-/* CSS GRID | MAIN GRID AREAS */
+/* CSS GRID | CONTAINER GRID AREAS */
 
 header { grid-area: nav; }
 main { grid-area: main; }
@@ -38,16 +36,25 @@ footer { grid-area: footer; }
 
 
 
-/* CSS GRID | SUB STRUCTURES */
+/* CSS GRID | MAIN STRUCTURE */
 
-main {
+
+main { display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". main-c ."
+}
+
+#main-c {
+    grid-area: main-c;
     display:grid;
     grid-template-columns: 
-    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-areas:
     "today today today . . source source source"
     ". . mcard mcard mcard mcard . ."
-    "timestamp timestamp timestamp . . project-title project-title project-title";
+    "timestamp timestamp timestamp . . project-title project-title project-title ";
 }
 
     .maincard{ grid-area:mcard; text-align:center; }
@@ -56,33 +63,114 @@ main {
     .project-title { grid-area:project-title; text-align:right;}
     .today { grid-area:today; }
 
-#hire-bar {
+/* CSS GRID | HIREBAR STRUCTURE */
+
+
+#hire-bar { display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". hire-bar-c ."}
+
+.hire-bar-c {
+    grid-area: hire-bar-c;
     display:grid;
     grid-template-columns: 
     1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "htext htext htext htext hbtn hbtn";
+    "htext htext htext htext htext hbtn";
 }
 
     .htext {grid-area:htext;}
     .hbtn {grid-area:hbtn;}
 
-#work, #clients, #probono, #collab {
+
+/* CSS GRID | WORK STRUCTURE */
+
+#work {display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". work-c ."}
+
+.work-c {
+    grid-area: work-c;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
     gap: 1em;
     grid-template-areas: 
     "section-title section-title section-title"
-    "card card card";
 }
 
-.section-title { grid-area: section-title; }
+
+#clients {display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". clients-c ."}
+
+.clients-c {
+    grid-area: clients-c;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "section-title section-title section-title"
+}
+
+
+#probono {display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". probono-c ."}
+
+.probono-c {
+    grid-area: probono-c;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "section-title section-title section-title"
+}
+
+
+#collab {display:grid;
+    grid-template-columns:
+    10em 1fr 10em;
+    grid-template-areas:
+    ". collab-c ."}
+
+.collab-c {
+    grid-area: collab-c;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "section-title section-title section-title"
+}
+
+/* 
+#clients, #probono, #collab {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "section-title section-title section-title"
+} */
+
+    .section-title { grid-area: section-title; }
 /* NAV FLEXBOX */
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
+    position:fixed;
+    top:0;
+    left:50%;
+    transform: translate(-50%, 0);
+    width:50vw;
 }
 
     nav ul {
@@ -91,13 +179,12 @@ header {
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        gap: 1rem;
+        gap: 3rem;
     }
 
     nav ul:nth-child(*) {
         align-items:center;
     }
-
 
 
 /* CARD CSS GRID STRUCTURE */
@@ -129,6 +216,7 @@ header {
         box-shadow: 0 5px 10px #e7e7e7;
         border-radius: 1rem;
         padding:1.5rem;
+        background-color: #fff;
     }
 
 
@@ -137,29 +225,51 @@ header, footer {
     color: #fff;
 }
 
-main, #work, #clients, #probono, #collab {
+#work, #clients, #probono, #collab {
         padding: 5rem 0;
         background-color: rgb(248, 200, 200);
     }
  
 main {
-    
-        border-radius: 1rem;
-        padding: 1.5rem;
-        background-color: rgb(184, 235, 254);
+    padding: 10rem 0 3rem;
+    background-color: rgb(248, 200, 200);
+}
+
+#hire-bar {
+    padding: .5rem 0 0;
+    background-color: rgb(248, 200, 200);
+}
+
+#main-c {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: rgb(184, 235, 254);
 }    
 
     .maincard {
         box-shadow: 0 5px 10px #000000;
         background-color: rgba(255, 255, 255, 0.033);
-            border-radius: 1rem;
+        border-radius: 1rem;
         padding: 3rem 0;
         margin: 3rem 0 5rem;
 
     }    
 
-#hire-bar {
+.hire-bar-c {
     border-radius: 1rem;
-        padding: 1rem 1.5rem;
-        background-color: rgb(184, 235, 254);
+    padding: 1rem 1.5rem;
+    background-color: rgb(184, 235, 254);
+}
+
+/* STYLES */
+
+.logo {
+    font-size: 1rem;
+    margin-right: 3rem;
+}
+
+header {
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    padding:1.5rem;
 }
