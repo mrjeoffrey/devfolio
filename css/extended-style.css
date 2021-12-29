@@ -1,7 +1,109 @@
-.box {
-    box-shadow: 0 10px 10px #000000;
-    border: 1px solid black;
-    border-radius: 4px;
-    padding:10px;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
 }
+
+
+
+/* CSS GRID | MAIN STRUCTURE */
+
+body {
+    display:grid;
+    grid-template-columns: 
+    10em 1fr 10em;
+    grid-template-areas: 
+    "nav nav nav"
+    " . main ."
+    " . hire ."
+    ". work ."
+    ". clients ."
+    ". probono ."
+    ". collab ."
+    ". resume ."
+    ". connect ."
+    ". footer.";
+}
+
+/* CSS GRID | MAIN GRID AREAS */
+
+header { grid-area: nav; }
+main { grid-area: main; }
+#hire-bar { grid-area: hire; }
+#work { grid-area: work; }
+#clients { grid-area: clients; }
+#probono { grid-area: probono; }
+#collab { grid-area: collab; }
+header { grid-area: nav; }
+footer { grid-area: footer; }
+
+
+/* CSS GRID | SUB STRUCTURES */
+
+#work, #clients, #probono, #collab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    grid-template-areas: 
+    "section-title section-title section-title"
+    "card card card";
+}
+
+.section-title { grid-area: section-title; }
+/* NAV FLEXBOX */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5vh;
+}
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+    }
+
+    nav ul:nth-child(*) {
+        align-items:center;
+    }
+
+
+
+/* CARD CSS GRID STRUCTURE */
+    
+    .box {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "title title title"
+        "desc desc desc"
+        "live live live";
+        gap: .5rem 0;
+    }
+
+    .card-row-main {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
+    }
+
+    .card-row-main { grid-area: title;}
+    /* .projTitle { grid-area: title; }
+    .deployment { grid-area: link; align-self: flex-end; } */
+    .projDescription {grid-area: desc; }
+    .box .deployed {grid-area: live;
+    text-align:right; }
+
+/* CARD STYLES */
+
+    .box {
+        box-shadow: 0 5px 10px #e7e7e7;
+        border-radius: 1rem;
+        padding:1.5rem;
+    }
 
