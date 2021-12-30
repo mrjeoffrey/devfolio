@@ -9,19 +9,20 @@
     <title>Portfolio</title>
 
 </head>
-<body>
+<body class="grid">
     <header>
-        <h1 class="logo">jeoffrey.io</h1>
+        <h1 class="logo">&lt;/<span class="no-weight">jeoffrey.io</span>&gt;</h1>
         <nav class="primary">
             <ul>
-                <li id="link-1">Work</li>
-                <li id="link-2">Clients</li>
-                <li id="link-3">Pro-bono</li>
-                <li id="link-4">Collaborations</li>
-                <li id="link-5">Resume</li>
-                <li id="link-6">Contact</li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#probono">Pro-bono</a></li>
+                <li><a href="#collaborations">Collaborations</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
+        <input type="text" placeholder="Search">
     </header>
 
 <!-- insert secondary navigation -->
@@ -29,7 +30,7 @@
 
 <!-- main section will play a video -->
 
-    <main>
+    <main class="grid-parent">
         <div id="main-c">
             <section class="maincard">
                 <h1>Hi, I'm a Full Stack Web Developer.</h1>
@@ -50,8 +51,8 @@
         </div>
     </main>
 
-    <section id="hire-bar">
-        <div class="hire-bar-c">
+    <section id="hire-bar" class="grid-parent">
+        <div id="hire-bar-c">
             <div class="htext"><p>%TimeSalution!<br>
             Thanks for stopping by from %City, %State, or %Country. If you want to collaborate, click the button and I'll get back to you in %hours remaining. Thanks!</p></div>
             <div class="hbtn">   
@@ -60,8 +61,8 @@
         </div>  
     </section>
 
-    <section id="work">
-        <div class="work-c">
+    <section id="work" class="grid-parent">
+        <div id="work-c">
             <h2 class="section-title">Work</h2>
             
             <div class="box">
@@ -132,8 +133,8 @@
         </div>
     </section>
         
-    <section id="clients">
-        <div class="clients-c">
+    <section id="clients" class="grid-parent">
+        <div id="clients-c">
         <h2 class="section-title">Clients</h2>
         
         <div class="box">
@@ -204,8 +205,8 @@
     </div>
     </section>
 
-    <section id="probono">
-        <div class="probono-c">
+    <section id="probono" class="grid-parent">
+        <div id="probono-c">
         <h2 class="section-title">Pro-bono</h2>
         
         <div class="box">
@@ -276,8 +277,8 @@
     </div>
     </section>
 
-    <section id="collab">
-        <div class="collab-c">
+    <section id="collab"  class="grid-parent">
+        <div id="collab-c">
         <h2 class="section-title">Collaborations</h2>
         
         <div class="box">
@@ -352,9 +353,9 @@
 
 
     <footer>
-        <section>hello</section>
-        <section></section>
-        <section></section>
+        <section class="left">“Don’t have a good day, have a great day.” - FreeGuy %rotating.AI.quotes from movies</section>
+        <section class="middle"><p class="logo">&lt;/<span class="no-weight">jeoffrey.io</span>&gt;</p></section>
+        <section class="right">©2021-2022 All Rights Reserved. Terms of Use | Privacy Policy</section>
     </footer>
 
 </body>

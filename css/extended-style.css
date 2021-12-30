@@ -1,60 +1,84 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
 }
+
+/* NAVIGATION STRUCTURE & STYLES */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    position:sticky;
+    top:0;
+}
+
+    nav ul {
+        list-style-type: none;
+        
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    nav ul > li {
+        margin:0 .5rem;
+    }
 
 /* CSS GRID | MAIN STRUCTURE */
 
-body {
+.grid {
     display:grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "nav"
-    "main"
-    "hire"
-    "work"
-    "clients"
-    "probono"
-    "collab"
-    "resume"
-    "connect"
-    "footer";
-}
-
-/* CSS GRID | CONTAINER GRID AREAS */
-
-header { grid-area: nav; }
-main { grid-area: main; }
-#hire-bar { grid-area: hire; }
-#work { grid-area: work; }
-#clients { grid-area: clients; }
-#probono { grid-area: probono; }
-#collab { grid-area: collab; }
-header { grid-area: nav; }
-footer { grid-area: footer; }
-
-
-
-/* CSS GRID | MAIN STRUCTURE */
-
-
-main { display:grid;
     grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". main-c ."
+    5em 5em 3em 1fr 3em 5em 5em;
 }
+
+.grid-parent {
+    display:grid;
+    grid-template-columns: subgrid;
+}
+
+    header {
+        grid-column: 4 /-4;
+        }
+
+    main,
+    #hire-bar,
+    #work,
+    #clients,
+    #probono,
+    #collab,
+    footer {
+        grid-column:1/-1;
+    }
+
+        #main-c, 
+        #hire-bar-c, 
+        #work-c, 
+        #clients-c, 
+        #probono-c, 
+        #collab-c {
+            grid-column: 3 / -3;
+        }
+
+footer {
+    position:sticky;
+    bottom:0;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+/* CSS GRID | SUB STRUCTURES - USE FLEXBOX?*/
 
 #main-c {
-    grid-area: main-c;
     display:grid;
-    grid-template-columns: 
-    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(8, 1fr);
     grid-template-areas:
-    "today today today . . source source source"
+    "today today today today . source source source"
     ". . mcard mcard mcard mcard . ."
-    "timestamp timestamp timestamp . . project-title project-title project-title ";
+    ". . . . . . . ."
+    "timestamp timestamp timestamp timestamp . project-title project-title project-title";
 }
 
     .maincard{ grid-area:mcard; text-align:center; }
@@ -63,213 +87,255 @@ main { display:grid;
     .project-title { grid-area:project-title; text-align:right;}
     .today { grid-area:today; }
 
-/* CSS GRID | HIREBAR STRUCTURE */
+/* CSS GRID | HIREBAR STRUCTURE - USE FLEXBOX?*/
+
+    #hire-bar-c {
+        display:grid;
+        grid-template-columns: repeat(6,1fr);
+        /* 1fr 1fr 1fr 1fr 1fr 1fr; */
+        grid-template-areas:
+        "htext htext htext htext htext hbtn";
+    }
+
+            .htext {grid-area:htext;}
+            .hbtn {grid-area:hbtn;}
 
 
-#hire-bar { display:grid;
-    grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". hire-bar-c ."}
+/* CSS GRID | PORTFOLIO STRUCTURE */
 
-.hire-bar-c {
-    grid-area: hire-bar-c;
-    display:grid;
-    grid-template-columns: 
-    1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "htext htext htext htext htext hbtn";
-}
+    #work-c {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 1em;
+    }
 
-    .htext {grid-area:htext;}
-    .hbtn {grid-area:hbtn;}
+        #work-c .section-title {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+
+    #clients-c {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+        #clients-c .section-title {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+
+    #probono-c {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+        #probono-c .section-title {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+
+    #collab-c {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap: 1em;
+    }
+
+        #collab-c .section-title {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+        }
+
+    .section-title {
+        text-transform: uppercase;
+    }
+
+    /* PORTFOLIO CARD CSS GRID STRUCTURE */
+        
+        .box {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "title title title"
+            "desc desc desc"
+            "live live live";
+            gap: .5rem 0;
+        }
+
+            .card-row-main {
+                display: flex;
+                justify-content: space-between;
+                align-content: flex-start;
+            }
+
+            .card-row-main { grid-area: title;}
+            .projDescription {grid-area: desc; }
+            .box .deployed {grid-area: live;
+            text-align:right; }
+
+        /* PORTFOLIO CARD STYLES */
+
+            .box {
+                box-shadow: 0 5px 10px #e7e7e7;
+                border-radius: 1rem;
+                padding:1.5rem;
+                background-color: #fff;
+            }
 
 
-/* CSS GRID | WORK STRUCTURE */
-
-#work {display:grid;
-    grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". work-c ."}
-
-.work-c {
-    grid-area: work-c;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    "section-title section-title section-title"
-}
-
-
-#clients {display:grid;
-    grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". clients-c ."}
-
-.clients-c {
-    grid-area: clients-c;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    "section-title section-title section-title"
-}
-
-
-#probono {display:grid;
-    grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". probono-c ."}
-
-.probono-c {
-    grid-area: probono-c;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    "section-title section-title section-title"
-}
-
-
-#collab {display:grid;
-    grid-template-columns:
-    10em 1fr 10em;
-    grid-template-areas:
-    ". collab-c ."}
-
-.collab-c {
-    grid-area: collab-c;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    "section-title section-title section-title"
-}
-
-/* 
-#clients, #probono, #collab {
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 1em;
-    grid-template-areas: 
-    "section-title section-title section-title"
-} */
-
-    .section-title { grid-area: section-title; }
-/* NAV FLEXBOX */
+/* NAVIGATION STYLES */
 
 header {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    position:fixed;
-    top:0;
-    left:50%;
-    transform: translate(-50%, 0);
-    width:50vw;
+    background-color: #ffffffd6;
+    color: #434343;
+    font-size: 9pt;
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    padding:.75rem 0;
+    box-shadow: 0px 4px 16px #52525229;
+
 }
 
-    nav ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        gap: 3rem;
+    header .logo {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 9pt;
+        margin-right: 3rem;
     }
 
-    nav ul:nth-child(*) {
-        align-items:center;
+        .no-weight {
+            font-weight:lighter;
+        }
+
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: lowercase;
+    }
+
+        nav a {
+            text-decoration: none;
+            color: #434343;
+        }
+
+        nav a:hover {
+            color: #29a6e5;
+            background-color: rgb(220, 252, 255);
+            padding:5pt 0;
+        }
+
+    header > input {
+        font-family:'Courier New', Courier, monospace;
+        font-size: 8pt;
+        padding:1px 7px 0;
+        text-transform: lowercase;
     }
 
 
-/* CARD CSS GRID STRUCTURE */
-    
-    .box {
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "title title title"
-        "desc desc desc"
-        "live live live";
-        gap: .5rem 0;
+/* PORTFOLIO STYLES */
+#work, #clients, #probono, #collab {
+        padding: 4rem 0;
+        background-color: rgb(248, 200, 200);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
     }
 
-    .card-row-main {
-        display: flex;
-        justify-content: space-between;
-        align-content: flex-start;
+    #work { background-color: #4D85A8; }
+    #clients { background-color: #E6FFD6; }
+    #probono { background-color: #ffffff; }
+    #collab { background-color: #EFF8FF; }
+
+    #work {
+        padding-top:2rem;
+    }
+    #work h2 {
+        color: white;
     }
 
-    .card-row-main { grid-area: title;}
-    .projDescription {grid-area: desc; }
-    .box .deployed {grid-area: live;
-    text-align:right; }
+    #work .box {
+        box-shadow: 0px 10px 16px #52525229;
+    }
 
-/* CARD STYLES */
+.projTitle {
+    font-family: 'Courier New', Courier, monospace;
+    color:#343434;
+    font-size:10pt;
+}    
 
-    .box {
-        box-shadow: 0 5px 10px #e7e7e7;
+.projDescription {
+    color: #343434;
+    line-height:14pt;
+}
+
+.deployed {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(24, 173, 248);
+    font-size: 8pt;
+}
+
+
+/* MAIN CONTENT STYLES */
+main {
+    margin-top: -8vh; /* Removes GAP from HEADER position:sticky */
+    padding: 5rem 0 1rem;
+    background-color: #013A4E;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:8pt;
+}
+
+    #main-c {
         border-radius: 1rem;
-        padding:1.5rem;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: #ffffff;
+    }    
+
+        .maincard {
+            background-color: rgb(255, 255, 255);
+            border-radius: .5rem;
+            padding: 2rem 0;
+            margin: 1.5rem 0 3rem;
+            color: #434343;
+            /* height:20vh; */
+        }    
+
+        .maincard h2, .maincard h1 {
+            font-size: 11pt;
+            margin-bottom:.5rem;}
+
+/* HIREBAR STYLES */
+
+#hire-bar {
+    background: linear-gradient(#013A4E 50%, #4D85A8 50%);
+    font-family: 'Courier New', Courier, monospace;
+    font-size:9pt;
+}
+
+    #hire-bar-c {
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
         background-color: #fff;
     }
 
-
-header, footer {
-    background-color: rgb(50, 50, 50);
-    color: #fff;
+/* FOOTER STYLES */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:7pt;
+    padding:1rem;
+    background-color: #212121;
+    color:white;
 }
 
-#work, #clients, #probono, #collab {
-        padding: 5rem 0;
-        background-color: rgb(248, 200, 200);
+footer .logo {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 9pt;
+        font-weight:bold;
+}
+
+    .middle {
+        text-align: center;
     }
- 
-main {
-    padding: 10rem 0 3rem;
-    background-color: rgb(248, 200, 200);
-}
 
-#hire-bar {
-    padding: .5rem 0 0;
-    background-color: rgb(248, 200, 200);
-}
-
-#main-c {
-    border-radius: 1rem;
-    padding: 1.5rem;
-    background-color: rgb(184, 235, 254);
-}    
-
-    .maincard {
-        box-shadow: 0 5px 10px #000000;
-        background-color: rgba(255, 255, 255, 0.033);
-        border-radius: 1rem;
-        padding: 3rem 0;
-        margin: 3rem 0 5rem;
-
-    }    
-
-.hire-bar-c {
-    border-radius: 1rem;
-    padding: 1rem 1.5rem;
-    background-color: rgb(184, 235, 254);
-}
-
-/* STYLES */
-
-.logo {
-    font-size: 1rem;
-    margin-right: 3rem;
-}
-
-header {
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-    padding:1.5rem;
-}
+    .right {
+        text-align: right;
+    }
