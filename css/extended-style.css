@@ -398,6 +398,9 @@ button:hover {
 
 
 /* CONNECT STYLES */
+#connect {
+    height: 94vh;
+}
 
 #connect-c .section-title {
     grid-column: span 1;
@@ -446,6 +449,7 @@ button:hover {
         font-size:24pt;
         font-weight:bolder;
         margin-bottom: 2rem;
+        line-height:2.75rem;
     }
 
     #connect .side h3 {
