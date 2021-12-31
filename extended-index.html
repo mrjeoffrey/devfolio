@@ -10,6 +10,9 @@
 
 </head>
 <body class="grid">
+
+
+
     <header>
         <h1 class="logo">&lt;/<span class="no-weight">jeoffrey.io</span>&gt;</h1>
         <nav class="primary">
@@ -17,8 +20,8 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#clients">Clients</a></li>
                 <li><a href="#probono">Pro-bono</a></li>
-                <li><a href="#collaborations">Collaborations</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#collab">Collaborations</a></li>
+                <!-- <li><a href="#resume">Resume</a></li> -->
                 <li><a href="#connect">Connect</a></li>
             </ul>
         </nav>
@@ -29,41 +32,47 @@
 <!-- insert social links -->
 
 <!-- main section will play a video -->
+    <video src="./vid/video-bg-2.mp4" autoplay loop playsinline muted></video>
 
     <main class="grid-parent">
         <div id="main-c">
-            <section class="maincard">
-                <h1>Hi, I'm a Full Stack Web Developer.</h1>
-                <h2>I like clean code & smart designs. Do you?</h2>
-                <button>No</button>
-                <button>Yes</button>
+            <section id="maincard-c" class="maincard">
+                <img class="profile-image"
+                 src="/img/profilepic.jpg" alt="Photo of me and my wife">
+                <div class="prompt">
+                    <p>Hi, I'm a <strong>Full Stack Web Developer.</strong></p>
+                    <p>I enjoy <strong>clean code</strong> & <strong>smart designs</strong>. <br/>Do you?</p>
+                </div>
+            <button class="btn1" type="button">No</button>
+            <button class="btn2" type="button">
+                <a href="#collab">Yes</a></button>
             </section>
         
-            <div class="timestamp">$timestamp Wed 12.15.2021 | 00:22:00 AM PST</div>
+            <div class="timestamp"><strong>$timestamp Wed 12.15.2021 | 00:22:00 AM PST</strong></div>
             <div class="source">$src: codepen.io/mrjeoffrey</div>
             <div class="project-title">$project title: Armageddon</div>
             <div class="today">
-                <p>68 degrees, sunny at 1:24pm<br>
+                <p><strong>68 degrees, sunny</strong> at <strong>1:24pm</strong><br>
                 wednesday december 15, 2021<br>
-                currently residing in california<br>
-                work zone PST</p>
+                currently residing in <strong>california</strong><br>
+                work zone <strong>PST</strong></p>
             </div>
         </div>
     </main>
 
     <section id="hire-bar" class="grid-parent">
         <div id="hire-bar-c">
-            <div class="htext"><p>%TimeSalution!<br>
-            Thanks for stopping by from %City, %State, or %Country. If you want to collaborate, click the button and I'll get back to you in %hours remaining. Thanks!</p></div>
-            <div class="hbtn">   
-            <button>Hire Me</button>
-            </div>
+            <div class="htext"><p><strong>%TimeSalution!</strong><br>
+            Thanks for stopping by from <strong>%City, %State, or %Country</strong>. If you want to collaborate, click the button and I'll get back to you in <strong>%hours remaining</strong>. Thanks!</p></div>
+              
+            <button class="hbtn"><a href="#connect">Hire Me</a></button>
+            
         </div>  
     </section>
 
     <section id="work" class="grid-parent">
         <div id="work-c">
-            <h2 class="section-title">Work</h2>
+            <h2 class="section-title">Work <span class="slug">— The only thing that ever sat its way to success was a hen. / Sarah Brown</span></h2>
             
             <div class="box">
                 <div class="card-row-main">
@@ -135,7 +144,7 @@
         
     <section id="clients" class="grid-parent">
         <div id="clients-c">
-        <h2 class="section-title">Clients</h2>
+        <h2 class="section-title">Clients <span class="slug"> — Every Business has a need </span></h2>
         
         <div class="box">
             <div class="card-row-main">
@@ -207,7 +216,7 @@
 
     <section id="probono" class="grid-parent">
         <div id="probono-c">
-        <h2 class="section-title">Pro-bono</h2>
+        <h2 class="section-title">Pro-bono <span class="slug"> — Some projects I'm passionate about</span></h2>
         
         <div class="box">
             <div class="card-row-main">
@@ -279,7 +288,7 @@
 
     <section id="collab"  class="grid-parent">
         <div id="collab-c">
-        <h2 class="section-title">Collaborations</h2>
+        <h2 class="section-title">Collaborations <span class="slug"> — Let's build an app together </span></h2>
         
         <div class="box">
             <div class="card-row-main">
@@ -349,13 +358,43 @@
     </div>
     </section>
 
+    <!-- <section id="resume"  class="grid-parent">
+        <div id="resume-c">
+        <h2 class="section-title">Curriculum Vitae — Course of Life</h2>
+    </div>
+    </section> -->
+
+    <section id="connect"  class="grid-parent">
+        <div id="connect-c">
+        <h2 class="section-title">Connect <span class="slug"> — Are You Ready?</span></h2>
+        <form action="">
+            <label>Full Name</label>
+            <input type="text">
+            <label>Email</label>
+            <input type="text">
+            <label>Contact Number</label>
+            <input type="text">
+            <button><a href="#connect">Let's Connect</a></button>
+        </form>
+        <div class="side">
+            <p class="quote">“Talent wins games, but teamwork and intelligence win championships.”<br/>– Michael Jordan</p>
+            <h3>Collaborate</h3>
+            <a href="#slackcommunity">Slack Workspace</a>&nbsp;&nbsp;|&nbsp;&nbsp;  <a href="#discordserver">Discord Server</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="#github">Github</a>
+            <h3>Capital</h3>
+            <p>a unique way to connect</p>
+            <button><a href="#connect">Hire Me</a></button>
+        </div>
+        
+        
 
 
+    </div>
+    </section>
 
     <footer>
-        <section class="left">“Don’t have a good day, have a great day.” - FreeGuy %rotating.AI.quotes from movies</section>
+        <section class="left quote">“Dont have a good day, have a great day.” - FreeGuy %rotating.AI.quotes from movies</section>
         <section class="middle"><p class="logo">&lt;/<span class="no-weight">jeoffrey.io</span>&gt;</p></section>
-        <section class="right">©2021-2022 All Rights Reserved. Terms of Use | Privacy Policy</section>
+        <section class="right">©2021-2022 All Rights Reserved. <a href="#termsofuse">Terms of Use</a> | <a href="#privacy">Privacy Policy</a></section>
     </footer>
 
 </body>

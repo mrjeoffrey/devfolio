@@ -28,6 +28,12 @@ header {
         margin:0 .5rem;
     }
 
+.flex-parent {
+    display:flex;
+    justify-content: space-between;
+}
+
+
 /* CSS GRID | MAIN STRUCTURE */
 
 .grid {
@@ -39,8 +45,6 @@ header {
 .grid-parent {
     display:grid;
     grid-template-columns: subgrid;
-
-    /* justify-content: space-evenly; */
 }
 
     header {
@@ -53,6 +57,8 @@ header {
     #clients,
     #probono,
     #collab,
+    #resume,
+    #connect,
     footer {
         grid-column:1/-1;
     }
@@ -62,7 +68,9 @@ header {
         #work-c, 
         #clients-c, 
         #probono-c, 
-        #collab-c {
+        #collab-c,
+        #resume-c,
+        #connect-c {
             grid-column: 3 / -3;
         }
 
@@ -74,6 +82,16 @@ footer {
 }
 
 /* CSS GRID | SUB STRUCTURES - USE FLEXBOX?*/
+
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;;
+  }
 
 #main-c {
     display:grid;
@@ -94,6 +112,30 @@ footer {
     .project-title { grid-area:project-title; text-align:right;}
     .today { grid-area:today; }
 
+    #maincard-c {
+        display:grid;
+        grid-template-columns: repeat(6,1fr);
+        padding: 1rem;
+        gap:.5rem;
+    }
+
+        .profile-image {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .prompt {
+            grid-column: 3 / -1;
+            text-align: left;
+            /* padding:.5rem 0 0 1.5rem; */
+        }
+        .prompt p {
+            font-size: 10pt;
+            font-weight: 300;
+            margin-bottom:.6rem;
+        }
+
+        
+
 /* CSS GRID | HIREBAR STRUCTURE - USE FLEXBOX?*/
 
     #hire-bar-c {
@@ -110,12 +152,15 @@ footer {
             .hbtn {grid-area:hbtn;}
 
 
+
 /* CSS GRID | PORTFOLIO STRUCTURE */
 
     #work-c,
     #clients-c,
     #probono-c,
-    #collab-c {
+    #collab-c,
+    #resume-c,
+    #connect-c {
         display: grid;
         grid-template-columns:1fr 1fr 1fr;
         gap: 1em; 
@@ -127,7 +172,9 @@ footer {
         #work-c .section-title,
         #clients-c .section-title,
         #probono-c .section-title,
-        #collab-c .section-title {
+        #collab-c .section-title,
+        #resume-c .section-title,
+        #connect-c .section-title {
             grid-column: 1 / -1;
             grid-row: 1 / 2;
         }
@@ -172,7 +219,7 @@ footer {
 /* NAVIGATION STYLES */
 
 header {
-    background-color: #ffffffd6;
+    background-color: #ffffffe6;
     color: #434343;
     font-size: 9pt;
     border-bottom-left-radius: .75rem;
@@ -217,9 +264,8 @@ header {
 
 
 /* PORTFOLIO STYLES */
-#work, #clients, #probono, #collab {
+#work, #clients, #probono, #collab, #resume, #connect {
         padding: 4rem 0;
-        background-color: rgb(248, 200, 200);
         font-family: Arial, Helvetica, sans-serif;
         font-size: 10pt;
     }
@@ -228,9 +274,12 @@ header {
     #clients { background-color: #E6FFD6; }
     #probono { background-color: #ffffff; }
     #collab { background-color: #EFF8FF; }
+    #resume { background-color: #FFFFFF; }
+    #connect { background-color: #FFF500; }
+
 
     #work {
-        padding-top:2rem;
+        padding-top:4rem;
     }
     #work h2 {
         color: white;
@@ -258,14 +307,19 @@ header {
     font-size: 8pt;
 }
 
+.slug {
+    font-size: 10pt;
+    font-weight: normal;
+    font-style: italic;
+}
 
 /* MAIN CONTENT STYLES */
 main {
     margin-top: -8vh; /* Removes GAP from HEADER position:sticky */
     padding: 5rem 0 1rem;
-    background-color: #013A4E;
+    background-color: #013A4E75;
     font-family: 'Courier New', Courier, monospace;
-    font-size:8pt;
+    font-size:9pt;
 }
 
     #main-c {
@@ -281,17 +335,29 @@ main {
             padding: 2rem 0;
             margin: 1.5rem 0 3rem;
             color: #434343;
-            /* height:20vh; */
+            margin-bottom: 15rem;
+
         }    
 
         .maincard h2, .maincard h1 {
             font-size: 11pt;
             margin-bottom:.5rem;}
 
+        .maincard .profile-image {
+            object-fit:cover;
+            object-position:center;
+            display:block;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            border:5px solid white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.163), 0 3px 5px rgba(0, 0, 0, 0.094);
+        }
+
 /* HIREBAR STYLES */
 
 #hire-bar {
-    background: linear-gradient(#013A4E 50%, #4D85A8 50%);
+    background: linear-gradient(-179deg,#01394e75 59%, #4D85A8 60%);
     font-family: 'Courier New', Courier, monospace;
     font-size:9pt;
 }
@@ -302,13 +368,114 @@ main {
         background-color: #fff;
     }
 
+
+/* BUTTON STYLES */
+
+button {
+    padding: .35rem .75rem .25rem;
+    background-color: #fff;
+    border: 3px solid #343434;
+    border-radius:2pt;
+    font-size: 12pt;
+    text-transform: uppercase;
+    font-weight:bolder;
+}
+
+button a {
+    color: #343434;
+    text-decoration: none;
+}
+
+button a:hover {
+    color:white;
+}
+
+button:hover {
+    background-color: #4D85A8;
+    border: 3px solid #01394e;
+    color: white;
+}
+
+
+/* CONNECT STYLES */
+
+#connect-c .section-title {
+    grid-column: span 1;
+}
+
+#connect form {
+    grid-row-start: 2;
+    display:flex;
+    flex-direction:column;
+    justify-self: stretch;
+    border: 3px solid #383838;
+    border-radius:.50rem;
+    padding:2rem 2rem 3rem;
+    text-align:center;
+}
+
+    form label, form input {
+        display:block;
+    }
+
+    #connect label {
+        text-align:left;
+        font-size: 8pt;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    #connect input {
+        height: 2rem;
+        /* width: 11vw; */
+        margin: .25rem 0 1rem 0;
+    }
+
+    #connect button {
+        margin-top: .5rem;
+    }
+
+#connect .side {
+    grid-column: span 2;
+    grid-row: span 2;
+    text-align: right;
+    color:#383838;
+}
+
+    #connect .quote {
+        font-size:24pt;
+        font-weight:bolder;
+        margin-bottom: 2rem;
+    }
+
+    #connect .side h3 {
+        margin-top: 2rem;
+        text-transform: uppercase;
+    }
+
+    #connect .side p {
+        margin-bottom:.5rem;
+    }
+
+    #connect .side a {
+        font-family:'Courier New', Courier, monospace; 
+        font-weight: bold;
+        text-transform: lowercase;
+        color:#383838;
+    }
+
 /* FOOTER STYLES */
+
 footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size:7pt;
     padding:1rem;
     background-color: #212121;
     color:white;
+}
+
+footer .quote {
+    font-size: 9pt;
 }
 
 footer .logo {
@@ -324,3 +491,7 @@ footer .logo {
     .right {
         text-align: right;
     }
+
+footer a {
+    color:white;
+}
