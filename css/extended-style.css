@@ -37,6 +37,8 @@ header {
 .grid-parent {
     display:grid;
     grid-template-columns: subgrid;
+
+    /* justify-content: space-evenly; */
 }
 
     header {
@@ -79,6 +81,9 @@ footer {
     ". . mcard mcard mcard mcard . ."
     ". . . . . . . ."
     "timestamp timestamp timestamp timestamp . project-title project-title project-title";
+    /* ADDED for missing SUBGRID BROWSER COMPATIBILITY */
+    width: 1010px;
+    margin: 0 auto;
 }
 
     .maincard{ grid-area:mcard; text-align:center; }
@@ -92,9 +97,11 @@ footer {
     #hire-bar-c {
         display:grid;
         grid-template-columns: repeat(6,1fr);
-        /* 1fr 1fr 1fr 1fr 1fr 1fr; */
         grid-template-areas:
         "htext htext htext htext htext hbtn";
+        /* ADDED for missing SUBGRID BROWSER COMPATIBILITY */
+        width: 1010px;
+        margin: 0 auto;
     }
 
             .htext {grid-area:htext;}
@@ -103,45 +110,21 @@ footer {
 
 /* CSS GRID | PORTFOLIO STRUCTURE */
 
-    #work-c {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-        gap: 1em;
-    }
-
-        #work-c .section-title {
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
-        }
-
-    #clients-c {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-        gap: 1em;
-    }
-
-        #clients-c .section-title {
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
-        }
-
-    #probono-c {
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr;
-        gap: 1em;
-    }
-
-        #probono-c .section-title {
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
-        }
-
+    #work-c,
+    #clients-c,
+    #probono-c,
     #collab-c {
         display: grid;
         grid-template-columns:1fr 1fr 1fr;
-        gap: 1em;
+        gap: 1em; 
+        /* ADDED for missing SUBGRID BROWSER COMPATIBILITY */
+        width: 1010px;
+        margin: 0 auto;
     }
 
+        #work-c .section-title,
+        #clients-c .section-title,
+        #probono-c .section-title,
         #collab-c .section-title {
             grid-column: 1 / -1;
             grid-row: 1 / 2;
