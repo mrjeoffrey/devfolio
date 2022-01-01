@@ -1,146 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX6ELRY07B"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MX6ELRY07B"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-MX6ELRY07B');
+      gtag("config", "G-MX6ELRY07B");
     </script>
 
     <!-- Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>devfolio</title>
-</head>
-<body>
-    
-<header class="flex space-between center">
-    <h1 id="logo">jeoffrey.io</h1>
-    <nav class="flex space-evenly">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Devfolio v.1</title>
+  </head>
+
+  <body>
+    <header class="flex space-between center">
+      <h1 id="logo">jeoffrey.io</h1>
+      <nav class="flex space-evenly">
         <a href="#about">about</a>
         <a href="#projects">projects</a>
         <a href="#contact">contact</a>
-    </nav> 
-</header>
+      </nav>
+    </header>
 
-<section class="about grid-parent">
-    <h2 id="about">about</h2>
-    <p>I'm a full-stack web developer, residing in Irvine, CA. I work 9-5pm PST workzone. I design and develop engaging user experiences on mobile and web. Outside of work, I enjoy watching my baby daughter grow up, cooking, cleaning, and trying out new hobbies.</p>
-    <div class="links">
-        <a href="https://github.com/mrjeoffrey">github</a>
-        <a href="https://www.linkedin.com/in/jeoffreybatangan/">linkedin</a>
-        <a href="https://stackoverflow.com/users/3507804/mrjeoffrey">stackoverflow</a>
-    </div>
-</section>
+    <section class="content dark" id="about">
+      <div class="container flex margin-auto">
+        <h2 class="section-title">about</h2>
 
-<section class="portfolio grid-parent">
-    <h2 id="projects">projects</h2>
-
-    <div class="portfolio-grid">
-
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>HoriSEOn ADA Landing Page</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
+        <div class="container-item flex-wrap gap">
+          <img class="profile-pic" src="./img/profilepic.jpg" />
+          <p class="profile-text">
+            I'm a full-stack web developer, residing in Irvine, CA. I work 9-5pm
+            PST workzone. I design and develop engaging user experiences on mobile
+            and web. Outside of work, I enjoy watching my baby daughter grow up,
+            cooking, cleaning, and trying out new hobbies.
+          </p>
+          <div class="links">
+            <a href="https://github.com/mrjeoffrey">github</a>
+            <a href="https://www.linkedin.com/in/jeoffreybatangan/">linkedin</a>
+            <a href="https://stackoverflow.com/users/3507804/mrjeoffrey"
+              >stackoverflow</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="content light" id="portfolio">
+      <div class="container flex margin-auto">
+        <h2 class="section-title">projects</h2>
+
+        <div class="container-item flex-wrap gap">
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>HoriSEOn ADA Landing Page</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>Project Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>Project Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>Project Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>Project Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              class="card-image"
+              src="https://picsum.photos/id/1/300/150"
+              alt="portfolio image"
+            />
+
+            <div class="card-description">
+              <h3>Project Title</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                quas ab minus quo culpa ratione.
+              </p>
+              <div class="card-btn">
+                <a class="button" href="#github-repo">github</a>
+                <a class="button" href="#deployed-page">live</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="content dark" id="contact">
+      <div class="container flex margin-auto">
+        <h2 class="section-title" id="contact">contact</h2>
         
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
-        </div>
+        <form class="flex space-between center">
+          <div>
+            <label for="name">name</label><input type="text" placeholder="name" />
+          </div>
+          <div>
+            <label for="email">email</label
+            ><input type="text" placeholder="email" />
+          </div>
+          <div>
+            <label for="message">short message</label
+            ><input type="text" placeholder="I need help with my website" />
+          </div>
+          <div><button>submit</button></div>
+        </form>
+      </div>
+    </section>
 
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
-        </div>
-
-        <div class="card">
-            <img class="card-image" src="https://picsum.photos/id/1/300/150" alt="portfolio image">
-            
-            <div class="card-description">
-                <h3>Project Title</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas ab minus quo culpa ratione.</p>
-                <div class="card-btn">
-                <a class="button" href="#github-repo">github</a>
-                <a class="button" href="#deployed-page">live</a></div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="contact grid-parent">
-    <h2 id="contact">contact</h2>
-    <form class="flex space-between center">
-        <div><label for="name">name</label><input type="text" placeholder="name"></div>
-        <div><label for="email">email</label><input type="text" placeholder="email"></div>
-        <div><label for="message">short message</label><input type="text" placeholder="I need help with my website"></div>
-        <div><button>submit</button></div>
-    </form>
-</section>
-
-<footer class="grid-parent">
-    <h3 class="credits">Made with ❤️ from Irvine</h3>
-    <p>©2021 jeoffrey.io All Rights Reserved. | Privacy Policy | Terms of Use</p>
-</footer>
-
-
-</body>
+    <footer class="">
+      <p>
+        ©2021-2022 jeoffrey.io • All Rights Reserved. • <a href="#privacy">Privacy Policy</a> • <a href="#terms">Terms of Use</a>
+        • Made with ❤️ from Irvine
+      </p>
+    </footer>
+  </body>
 </html>
