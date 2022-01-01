@@ -207,7 +207,7 @@ header {
 
 		.card-image {
 			object-fit: cover;
-			object-position: center;
+			object-position: top;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -216,6 +216,7 @@ header {
 			opacity: .25;
 			border-radius: 5px;
 			transition: all 100ms linear;
+
 		}
 
 		.card-image:hover {
