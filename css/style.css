@@ -79,15 +79,24 @@ body {
 
 	.margin-auto {
 		margin-right: auto;
-		margin-left:auto;
+		margin-left: auto;
 	}
+
+/* ANCHOR STYLES  */
+#about, #portfolio, #contact {
+	scroll-margin-top: 3em;
+}
+
+#contact {
+	height:90vh;
+}
 
 /* PROFILE */
 
 .section-title {
 	flex: 1 1 10%;
 	font-family: var(--code-font);
-  font-size: 1rem;
+  	font-size: 1rem;
 	margin-right: 2rem;
 	text-align: right;
 }
@@ -103,13 +112,19 @@ body {
 	}
 
 	.links {
-		display: block;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.links a {
 		text-decoration: none;
-		padding: 15px;
+		padding: 10px;
 		color: grey;
+		border-bottom: 1px solid lightgrey;
+	}
+
+	.links a:last-child {
+		border-bottom: 0 solid lightgrey;
 	}
 
 	.links a:hover {
@@ -173,7 +188,7 @@ header {
 	background-color: #fff;
 	border: 4px solid #343434;
 	border-radius: 10px;
-  box-shadow: 0px 5px 5px rgba(29, 29, 29, 0.122);
+  	box-shadow: 0px 5px 5px rgba(29, 29, 29, 0.122);
 	z-index:0;
 }
 
@@ -212,7 +227,8 @@ header {
 
 .card-description {
 	position: relative;
-	top: 60%;
+	top: auto;
+	bottom:-60%;
 	padding: .25rem .5rem .45rem;
 	width:80%;
 	background-color: #ffffffee;
@@ -221,7 +237,8 @@ header {
 	.card-description h3 {
 		font-size: 0.85rem;
 		margin-top:4px;
-		margin-bottom:0;
+		margin-bottom:.5rem;
+		line-height:.90rem;
 	}
 
 	.card-description p {
@@ -294,8 +311,8 @@ header {
 
 footer {
 	position: sticky;
-  bottom: 0;
-  width: 100%;
+	bottom: 0;
+	width: 100%;
 	background-color: #fff;
 	font-family: var(--main-font);
 	font-size: 0.75em;
@@ -304,6 +321,7 @@ footer {
 	text-align: center;
 	line-height: 1.5em;
 	padding: .5rem 0;
+	box-shadow: 0 0 2px rgb(206, 206, 206);
 }
 
 	footer a {
@@ -313,76 +331,89 @@ footer {
 	
 @media (max-width: 420px) {
 	.container {
-		max-width: 290px;
+		max-width: 295px;
 	}
 
-
-	header, 	#about .flex, #portfolio .flex, #contact .flex {
-		flex-direction:column;
-		justify-content: stretch;
+	#about, #portfolio, #contact {
+		scroll-margin-top: 7em;
+	}
+	
+	#contact {
+		height:80vh;
 	}
 
-footer {
-	position: relative;
-	padding: .5rem 1rem;
-}
+		header, 
+		#about .flex, 
+		#portfolio .flex, 
+		#contact .flex {
+			flex-direction:column;
+			justify-content: stretch;
+		}
 
-	.card {
-    flex: 1 1 250px;
-	}
+		footer {
+			position: relative;
+			padding: .5rem 1rem;
+		}
 
-	.card-description {
-		top: 38%;
-	}
+			.card {
+			flex: 1 1 250px;
+			}
 
-#about .gap {
-	justify-content: stretch;
-}
+			.card-description {
+				top: auto;
+			}
 
-#about .links {
-	flex: 1 1 0;
-}
+		#about .gap {
+			justify-content: stretch;
+		}
 
-	.content {
-		padding: 35px 0;
-	}
+		#about .links {
+			flex: 1 1 0;
+		}
 
-	.profile-pic {
-		max-width: 225px;
-    max-height: 225px;
-		margin: 0 auto;
-	}
+			.content {
+				padding: 35px 0;
+			}
 
-.section-title {
-	margin-right:0;
-	margin-bottom: 1rem;
-	text-align: center;
-}
+			.profile-pic {
+				max-width: 225px;
+				max-height: 225px;
+				margin: 0 auto;
+			}
 
-header h1 {
-	border-bottom: 1px solid #fff;
-}
+			.profile-text {
+				max-width: 100%;
+				flex: 2 1 100%;
+			}
 
-#logo {
-	margin-left:0;
-	padding: 10px 0;
-	flex: 1 1 100%;
-}
+		.section-title {
+			margin-right:0;
+			margin-bottom: 1rem;
+			text-align: center;
+		}
 
-	nav {
-		padding-right:0;
-	}
+		header h1 {
+			border-bottom: 1px solid #fff;
+		}
 
-	.space-evenly {
-		align-items:stretch;
-	}
+		#logo {
+			margin-left:0;
+			padding: 10px 0;
+			flex: 1 1 100%;
+		}
 
-	.links {
-		display:flex;
-		justify-content: space-between;
-	}
+			nav {
+				padding-right:0;
+			}
 
+			.space-evenly {
+				align-items:stretch;
+			}
 
+			.links {
+				display:flex;
+				justify-content: space-between;
+			}
 }
 
 
@@ -395,23 +426,41 @@ header h1 {
 
 @media (min-width: 768px) {
 	.container {
-		max-width: 768px;
+		max-width: 650px;
 	}
 
-.card {
-	height: 95vh;
-}
+	.content {
+		padding: 3rem 0;
+	}
+
+	.card {
+		height: 325px;
+	}
+
+	.card-description{
+		position: relative;
+		top:auto;
+		bottom: -10%;
+		padding: 0.25rem 0.5rem 0.45rem;
+		width: 80%;
+		background-color: #ffffffee;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: column;
+		}
 
 }
 
 @media (min-width: 992px) {
 	.container {
-		max-width: 992px;
+		max-width: 800px;
 	}
 }
 
 @media (min-width: 1200px) {
 	.container {
-		max-width: 1200px;
+		max-width: 980px;
 	}
 }
