@@ -29,7 +29,7 @@ Open folder in VisualStudioCode and modify `index.html`
 ## LIVE
 | DEPLOYMENT | URL | STATUS |
 | ---------- | --- | ------ |
-| Repository  | [github.com/mrjeoffrey/devfolio](https://github.com/mrjeoffrey/horiseon-ada) |  ACTIVE 🟢   |
+| Repository  | [github.com/mrjeoffrey/devfolio](https://github.com/mrjeoffrey/devfolio) |  ACTIVE 🟢   |
 | Published Page     | [mrjeoffrey.github.io/devfolio](https://mrjeoffrey.github.io/devfolio/) | ACTIVE 🟢  |
 | Beta     | [mrjeoffrey.github.io/devfolio/extended-index.html](https://mrjeoffrey.github.io/devfolio/extended-index.html) | ACTIVE 🟢  |
 
