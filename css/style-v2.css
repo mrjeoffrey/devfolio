@@ -1,0 +1,23 @@
+#careerTitle::before {
+	content: "Full Stack Web Developer";
+	animation: changeText infinite 12s;
+}
+
+@keyframes changeText {
+	0% {
+		content: "Web Designer";
+	}
+	20% {
+		content: "UI Developer";
+	}
+
+	40% {
+		content: "Mobile App Designer";
+	}
+	60% {
+		content: "Product Designer";
+	}
+	80% {
+		content: "UX Researcher";
+	}
+}
