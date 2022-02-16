@@ -49,3 +49,8 @@
 	stroke-width: 8;
 	stroke-miterlimit: 10;
 }
+
+.fix {
+	object-fit: cover;
+	object-position: center;
+}
