@@ -1,3 +1,8 @@
+.fix {
+	object-fit: cover;
+	object-position: center;
+}
+
 #careerTitle::before {
 	content: "Full Stack Web Developer";
 	animation: changeText infinite 12s;
@@ -23,34 +28,56 @@
 }
 
 .st0 {
-	fill: #ffffff;
-}
-.st1 {
-	fill: none;
-	stroke: #494949;
-	stroke-width: 10;
-	stroke-miterlimit: 10;
-}
-.st2 {
 	fill: #eeeeee;
 }
-.st3 {
+.st1 {
 	fill: #aeaeae;
 }
-.st4 {
+.st2 {
 	fill: #c9c8c8;
 }
-.st5 {
-	clip-path: url(#SVGID_00000121963150699714611830000018367862808030137013_);
+.st3 {
+	clip-path: url(#SVGID_00000165192363327411362310000012743265361544441238_);
 }
-.st6 {
+.st4 {
+	fill: none;
+	stroke: #494949;
+	stroke-width: 4;
+	stroke-miterlimit: 10;
+}
+.st5 {
 	fill: none;
 	stroke: #494949;
 	stroke-width: 8;
 	stroke-miterlimit: 10;
 }
-
-.fix {
-	object-fit: cover;
-	object-position: center;
+.st6 {
+	clip-path: url(#SVGID_00000165225924727247221890000006799523562357207941_);
+}
+.st7 {
+	clip-path: url(#SVGID_00000038379370584178614120000009566037038583194789_);
+}
+.st8 {
+	fill: none;
+	stroke: #bcbec0;
+	stroke-width: 6;
+	stroke-miterlimit: 10;
+}
+.st9 {
+	fill: none;
+	stroke: #808285;
+	stroke-width: 6;
+	stroke-miterlimit: 10;
+}
+.st10 {
+	fill: none;
+	stroke: #494949;
+	stroke-width: 8;
+	stroke-miterlimit: 10;
+}
+.st11 {
+	fill: none;
+	stroke: #494949;
+	stroke-width: 6;
+	stroke-miterlimit: 10;
 }
