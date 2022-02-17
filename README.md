@@ -1,9 +1,9 @@
-# devfolio
+# devfolio 2.0
 This developer portfolio highlights client work and projects developed using skills in browser-based technologies, API design, database schema, and serverside development. All work displays my technical skills in HTML, CSS, JavaScript, jQuery, Bootstrap, PWAs, React.js and back-end implementation via REST, JSON, AJAX, GraphQL, node.js, express.js, and MERN.
 - View the deployed page to match my experience with your business needs and we can negotiate terms for collaboration.
 - One goal for this portfolio was to heavily use FlexBox as a layout tool and make each portfolio item viewable by any device.
 - Rather than have multiple pages for each device, now you can use one page using Flexbox to view on any device screensize.
-- Flexbox is one way to create responsive static pages, and used with CSS Grid, more complex and visually engaging layouts can be  created. Preview my [CSS GRID exploration](https://mrjeoffrey.github.io/devfolio/extended-index.html)
+- Flexbox is one way to create responsive static pages, and used with CSS Grid, more complex and visually engaging layouts can be  created.
 
 ## Install
 To use this portfolio as a template, open `terminal` or `gitbash` and move to Desktop
@@ -22,24 +22,22 @@ Open folder in VisualStudioCode and modify `index.html`
 
 ## Usage
 
-<!-- | Desktop | Mobile |
+| Desktop | Mobile |
 | ------- | ------ |
-| ![devfolio desktop version 1.0](assets/screenshots/devfolio-desktop-v1.png) | ![devfolio mobile version 1.0](assets/screenshots/devfolio-mobile-v1.png) | -->
+| ![devfolio desktop version 2.0](assets/screenshots/desktop-devfolio-v2.png) | ![devfolio mobile version 2.0](assets/screenshots/mobile-devfolio-v2.png) |
 
 ## LIVE
 | DEPLOYMENT | URL | STATUS |
 | ---------- | --- | ------ |
 | Repository  | [github.com/mrjeoffrey/devfolio](https://github.com/mrjeoffrey/devfolio) |  ACTIVE 🟢   |
 | Published Page     | [mrjeoffrey.github.io/devfolio](https://mrjeoffrey.github.io/devfolio/) | ACTIVE 🟢  |
-| Beta     | [mrjeoffrey.github.io/devfolio/extended-index.html](https://mrjeoffrey.github.io/devfolio/extended-index.html) | ACTIVE 🟢  |
+
+| Version | URL | STATUS |
+| ---------- | --- | ------ |
+| 1.0    | [mrjeoffrey.github.io/devfolio/1.0/](https://mrjeoffrey.github.io/devfolio/1.0/index.html) | ACTIVE 🟢  |
+| 1.1    | [mrjeoffrey.github.io/devfolio/1.1/](https://mrjeoffrey.github.io/devfolio/1.1/index.html) | ACTIVE 🟢  |
 
 ## Credits
-
-| Contributors | Role |
-| ----- | ---- |
-| [Marcus Lewis](https://github.com/lewisemarcus) | image overlay positioning, flexgrid techniques |
-| [Tyler Welker](https://github.com/twelk) | performed code reviews and regression testing |
-| [Jason Yoo](https://github.com/jasonjayoo) | performed code reviews and regression testing |
 
 | Resources | Descriptions |
 | --------- | ------------ |

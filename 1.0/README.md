@@ -1,4 +1,4 @@
-# devfolio
+# devfolio 1.0/1.1
 This developer portfolio highlights client work and projects developed using skills in browser-based technologies, API design, database schema, and serverside development. All work displays my technical skills in HTML, CSS, JavaScript, jQuery, Bootstrap, PWAs, React.js and back-end implementation via REST, JSON, AJAX, GraphQL, node.js, express.js, and MERN.
 - View the deployed page to match my experience with your business needs and we can negotiate terms for collaboration.
 - One goal for this portfolio was to heavily use FlexBox as a layout tool and make each portfolio item viewable by any device.
