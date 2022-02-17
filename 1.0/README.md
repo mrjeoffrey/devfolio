@@ -3,7 +3,7 @@ This developer portfolio highlights client work and projects developed using ski
 - View the deployed page to match my experience with your business needs and we can negotiate terms for collaboration.
 - One goal for this portfolio was to heavily use FlexBox as a layout tool and make each portfolio item viewable by any device.
 - Rather than have multiple pages for each device, now you can use one page using Flexbox to view on any device screensize.
-- Flexbox is one way to create responsive static pages, and used with CSS Grid, more complex and visually engaging layouts can be  created. Preview my [CSS GRID exploration](https://mrjeoffrey.github.io/devfolio/extended-index.html)
+- Flexbox is one way to create responsive static pages, and used with CSS Grid, more complex and visually engaging layouts can be  created. Preview my [CSS GRID exploration](https://mrjeoffrey.github.io/devfolio/1.0/index.html)
 
 ## Install
 To use this portfolio as a template, open `terminal` or `gitbash` and move to Desktop
@@ -22,16 +22,16 @@ Open folder in VisualStudioCode and modify `index.html`
 
 ## Usage
 
-<!-- | Desktop | Mobile |
+| Desktop | Mobile |
 | ------- | ------ |
-| ![devfolio desktop version 1.0](assets/screenshots/devfolio-desktop-v1.png) | ![devfolio mobile version 1.0](assets/screenshots/devfolio-mobile-v1.png) | -->
+| ![devfolio desktop version 1.0](./assets/screenshots/devfolio-desktop-v1.png) | ![devfolio mobile version 1.0](./assets/screenshots/devfolio-mobile-v1.png) |
 
 ## LIVE
 | DEPLOYMENT | URL | STATUS |
 | ---------- | --- | ------ |
-| Repository  | [github.com/mrjeoffrey/devfolio](https://github.com/mrjeoffrey/devfolio) |  ACTIVE 🟢   |
-| Published Page     | [mrjeoffrey.github.io/devfolio](https://mrjeoffrey.github.io/devfolio/) | ACTIVE 🟢  |
-| Beta     | [mrjeoffrey.github.io/devfolio/extended-index.html](https://mrjeoffrey.github.io/devfolio/extended-index.html) | ACTIVE 🟢  |
+| Repository  | [github.com/mrjeoffrey/devfolio/1.0](https://github.com/mrjeoffrey/devfolio/1.0/) |  ACTIVE 🟢   |
+| Published Page     | [mrjeoffrey.github.io/devfolio/1.0/](https://mrjeoffrey.github.io/devfolio/1.0/) | ACTIVE 🟢  |
+| Beta     | [mrjeoffrey.github.io/devfolio/1.1/](https://mrjeoffrey.github.io/devfolio/1.1/) | ACTIVE 🟢  |
 
 ## Credits
 
