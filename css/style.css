@@ -81,3 +81,7 @@
 	stroke-width: 6;
 	stroke-miterlimit: 10;
 }
+
+#connect {
+	background-color: #f8fdff;
+}
